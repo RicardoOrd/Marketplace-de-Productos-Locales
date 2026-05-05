@@ -1,0 +1,146 @@
+/* Estilos limpios y simples */
+:root {
+  --primary-color: #0066cc;
+  --bg-color: #f8f9fa;
+  --card-bg: #ffffff;
+  --text-color: #333333;
+  --text-muted: #666666;
+  --border-color: #dddddd;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.header h1 {
+  margin: 0 0 0.5rem 0;
+  color: #222;
+}
+
+.header p {
+  color: var(--text-muted);
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.main-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.acciones {
+  text-align: center;
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.btn-primary:hover:not(:disabled) {
+  background-color: #0052a3;
+}
+
+.btn-primary:disabled {
+  background-color: #99c2eb;
+  cursor: not-allowed;
+}
+
+.alerta-error {
+  background-color: #fde8e8;
+  color: #c53030;
+  padding: 1rem;
+  border-radius: 4px;
+  border-left: 4px solid #c53030;
+}
+
+.productos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.producto-card {
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  display: flex;
+  flex-direction: column;
+}
+
+.producto-precio {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+}
+
+.producto-nombre {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.2rem;
+}
+
+.producto-descripcion {
+  color: var(--text-muted);
+  margin: 0 0 1rem 0;
+  flex-grow: 1;
+}
+
+.producto-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid var(--border-color);
+  padding-top: 1rem;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+.debug-json {
+  background-color: #2d2d2d;
+  color: #cccccc;
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+}
+
+.debug-json summary {
+  cursor: pointer;
+  font-weight: bold;
+  color: #4da6ff;
+  outline: none;
+}
+
+.debug-json pre {
+  margin-top: 1rem;
+  overflow-x: auto;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 0.9rem;
+  color: #99ff99;
+}
